@@ -31,6 +31,7 @@ class Routes {
   static const String muscle_areaView = '/muscleareaview';
   static const String chatroomView = '/chatroomview';
   static const String videoView = '/videoview';
+  static const String homeView = '/homeview';
   static const List pages = [MuscleAreaView(),CollectionListView(),ChatroomView(),CalendarView(), AccountView()];
 
 
@@ -48,7 +49,8 @@ class Routes {
       collectView: (context)=> CollectionView(),
       muscle_areaView: (context)=> MuscleAreaView(),
       chatroomView: (context) => ChatroomView(),
-      videoView: (context) => VideoView()
+      videoView: (context) => VideoView(),
+      homeView: (context) => HomeView()
 
 
     };
