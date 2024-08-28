@@ -1,1 +1,5 @@
-.env
+*.env
+controller/__pycache__/
+\controller/__pycache__/
+\controller\__pycache__\Call_GPT.cpython-311.pyc
+controller\__pycache__\Call_GPT.cpython-311.pyc

@@ -3,10 +3,7 @@ import 'package:view/constants/route.dart';
 import 'package:view/models/Chat_Record.dart';
 import 'package:view/services/chatrecord_svs.dart';
 import 'package:quickalert/quickalert.dart';
-<<<<<<< HEAD
-=======
 import 'package:url_launcher/url_launcher.dart';
->>>>>>> 32ebeec86a5bedb4749f5f2e0d20b102971ee8e1
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -16,11 +13,6 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-<<<<<<< HEAD
-
-  List<ChatRecord> chatrecords = [];
-
-=======
   List<ChatRecord> chatrecords = [];
 
   // Icon data with asset paths and corresponding information
@@ -66,7 +58,6 @@ class _HomeViewState extends State<HomeView> {
 
   ];
 
->>>>>>> 32ebeec86a5bedb4749f5f2e0d20b102971ee8e1
   void createChatRecord(ChatRecord chatrecord) async {
     chatrecords.add(chatrecord);
     Chatrecord_SVS service = Chatrecord_SVS(chatrecords: chatrecords);
@@ -76,22 +67,6 @@ class _HomeViewState extends State<HomeView> {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    double placeholderWidth = (MediaQuery.of(context).size.width - 40) / 4; // Subtracting padding and margins
-
-    List<Widget> iconPlaceholders = List.generate(8, (index) {
-      return Container(
-        width: placeholderWidth,
-        height: placeholderWidth,
-        decoration: BoxDecoration(
-          color: Colors.green[50],
-          borderRadius: BorderRadius.circular(12),
-        ),
-        margin: EdgeInsets.all(8), // Space around each placeholder
-      );
-    });
-=======
->>>>>>> 32ebeec86a5bedb4749f5f2e0d20b102971ee8e1
     return Scaffold(
       backgroundColor: Color(0xFFE9F5EF),
       body: Column(
@@ -100,15 +75,9 @@ class _HomeViewState extends State<HomeView> {
           Stack(
             children: [
               Image.asset(
-<<<<<<< HEAD
-                'assets/home_background.jpg', // Replace with your image
-                width: double.infinity,
-                height: 250,
-=======
                 'assets/home_background.jpg',
                 width: double.infinity,
                 height: 200,
->>>>>>> 32ebeec86a5bedb4749f5f2e0d20b102971ee8e1
                 fit: BoxFit.cover,
               ),
               Positioned(
@@ -134,16 +103,9 @@ class _HomeViewState extends State<HomeView> {
           // Middle section with icons
           Container(
             padding: EdgeInsets.all(16),
-<<<<<<< HEAD
-            child: _buildIconWithBackground(iconPlaceholders),
-          ),
-
-          // Spacer to fill the gap between sections
-=======
             child: _buildIconWithBackground(),
           ),
 
->>>>>>> 32ebeec86a5bedb4749f5f2e0d20b102971ee8e1
           Spacer(flex: 2),
 
           // New Chat section
@@ -152,12 +114,7 @@ class _HomeViewState extends State<HomeView> {
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
-<<<<<<< HEAD
-                border: Border.all(
-                    color: Colors.white, width: 2),
-=======
                 border: Border.all(color: Colors.white, width: 2),
->>>>>>> 32ebeec86a5bedb4749f5f2e0d20b102971ee8e1
                 borderRadius: BorderRadius.circular(10),
               ),
               padding: const EdgeInsets.all(16.0),
@@ -179,17 +136,6 @@ class _HomeViewState extends State<HomeView> {
                           hintText: '請輸入名稱',
                         ),
                         textInputAction: TextInputAction.next,
-<<<<<<< HEAD
-                        onChanged: (value) =>
-                        chatRecord = ChatRecord(
-                            id: "",
-                            userId: "",
-                            message: [],
-                            suggestedVideoIds: [],
-                            name: value,
-                            timestamp: "",
-                            finish: "no"),
-=======
                         onChanged: (value) => chatRecord = ChatRecord(
                           id: "",
                           userId: "",
@@ -199,7 +145,6 @@ class _HomeViewState extends State<HomeView> {
                           timestamp: "",
                           finish: "no",
                         ),
->>>>>>> 32ebeec86a5bedb4749f5f2e0d20b102971ee8e1
                       ),
                       onConfirmBtnTap: () async {
                         if (chatRecord.name.length < 5) {
