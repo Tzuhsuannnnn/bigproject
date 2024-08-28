@@ -32,7 +32,7 @@ class Routes {
   static const String chatroomView = '/chatroomview';
   static const String videoView = '/videoview';
   static const String homeView = '/homeview';
-  static const List pages = [MuscleAreaView(),CollectionListView(),ChatroomView(),CalendarView(), AccountView()];
+  static const List pages = [HomeView(),CollectionListView(),ChatroomView(),CalendarView(), AccountView()];
 
 
   static Map<String, WidgetBuilder> getRoutes() {
